@@ -1,0 +1,44 @@
+# SGNL
+
+> SGNL is a continuous identity and authorization platform that eliminates standing privilege and makes real-time, context-aware access decisions for both human users and AI agents. It sits at the center of an enterprise IAM architecture, dynamically adapting permissions as conditions change and revoking sessions in real time, built on the OpenID Shared Signals Framework (SSF) and the Continuous Access Evaluation Profile (CAEP).
+
+## APIs
+- [SGNL Public API v2 (Access Service)](https://developer.sgnl.ai/): REST/JSON access-evaluation API. Base URL https://{clientName}.sgnlapis.cloud. Bearer-token auth. Endpoints: POST /access/v2/evaluations, /access/v2/search/assets, /access/v2/search/principals, /access/v2/directory/query, /access/v2/providers.
+
+## Docs
+- [Developer Documentation](https://developer.sgnl.ai/): Public API v2 reference.
+- [Help Center](https://help.sgnl.ai/): Product documentation and support.
+- [Integrations](https://sgnl.ai/product/integrations/): Connectors for AWS, Azure, Okta, Auth0, CrowdStrike, Workday, ServiceNow, GitHub, Kong, Apigee and more.
+- [CAEP resources](https://caep.dev/): SGNL's open-source OpenID Shared Signals Framework receiver and CAEP tooling.
+- [Blog](https://sgnl.ai/blog/)
+- [Glossary](https://sgnl.ai/glossary/)
+
+## Standards
+- CAEP (Continuous Access Evaluation Profile)
+- OpenID Shared Signals Framework (SSF)
+- Security Event Token — RFC 8417 (SET)
+- SCIM
+- OAuth 2.0 Bearer / OpenID Connect
+
+## Open source (github.com/SGNL-ai)
+- [secevent-js](https://github.com/SGNL-ai/secevent-js): RFC 8417 SET with CAEP/SSF (JS/TS).
+- [set-transmitter-js](https://github.com/SGNL-ai/set-transmitter-js): SET HTTP transmission, zero dependencies.
+- [caep.dev](https://github.com/SGNL-ai/caep.dev): Go OpenID Shared Signals Framework receiver.
+- [adapter-framework](https://github.com/SGNL-ai/adapter-framework): Go ingestion adapter framework.
+- [fabricator](https://github.com/SGNL-ai/fabricator): CLI for relationship-aware CSV test data.
+
+## Security
+- [Responsible Disclosure](https://sgnl.ai/responsible-disclosure/): security@sgnl.ai
+- [Terms of Use](https://sgnl.ai/terms-of-use/)
+- [Privacy](https://sgnl.ai/privacy/)
+
+## Artifacts (API Evangelist enrichment)
+- Authentication: authentication/sgnl-authentication.yml
+- Conventions: conventions/sgnl-conventions.yml
+- Conformance: conformance/sgnl-conformance.yml
+- Data model: data-model/sgnl-data-model.yml
+- Lifecycle: lifecycle/sgnl-lifecycle.yml
+- Packages/SDKs: packages/sgnl-packages.yml
+- MCP (candidate): mcp/sgnl-mcp.yml
+- Domain security: security/sgnl-domain-security.yml
+- Vulnerability disclosure: security/sgnl-vulnerability-disclosure.yml

@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+host: https://sgnl.ai
+notes: >-
+  Probed the /.well-known/ discovery surface on the marketing host (sgnl.ai) and the
+  developer docs host (developer.sgnl.ai). The API host is a per-tenant template
+  (https://{clientName}.sgnlapis.cloud) with no resolvable generic host, so it was
+  not probed. No well-known documents are published.
+documents:
+- path: /.well-known/security.txt
+  host: https://sgnl.ai
+  status: 404
+- path: /.well-known/openid-configuration
+  host: https://sgnl.ai
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  host: https://sgnl.ai
+  status: 404
+- path: /.well-known/api-catalog
+  host: https://sgnl.ai
+  status: 404
+- path: /.well-known/ai-plugin.json
+  host: https://sgnl.ai
+  status: 404
+- path: /.well-known/security.txt
+  host: https://developer.sgnl.ai
+  status: 404
+- path: /.well-known/openid-configuration
+  host: https://developer.sgnl.ai
+  status: 404

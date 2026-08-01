@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/SGNL-ai
+notes: >-
+  First-party open-source libraries published by the SGNL-ai GitHub organization.
+  These implement the CAEP / Shared Signals Framework (SSF) and Security Event Token
+  (RFC 8417) standards SGNL builds on, plus tooling for its ingestion adapters. They
+  are not thin generated clients of the SGNL Public API v2 (which has no published
+  generated SDK), but they are genuinely first-party and developer-facing.
+packages:
+- language: javascript
+  registry: github
+  name: secevent-js
+  url: https://github.com/SGNL-ai/secevent-js
+  description: JavaScript/TypeScript library implementing RFC 8417 Security Event Tokens
+    (SET) with CAEP and SSF support.
+  official: true
+- language: javascript
+  registry: github
+  name: set-transmitter-js
+  url: https://github.com/SGNL-ai/set-transmitter-js
+  description: HTTP transmission library for Security Event Tokens (SET) with CAEP/SSF
+    support and zero dependencies.
+  official: true
+- language: go
+  registry: github
+  name: adapter-framework
+  url: https://github.com/SGNL-ai/adapter-framework
+  description: SGNL ingestion adapter framework for building System-of-Record connectors.
+  official: true
+- language: go
+  registry: github
+  name: caep.dev
+  url: https://github.com/SGNL-ai/caep.dev
+  description: Open-source Go OpenID Shared Signals Framework (SSF) receiver.
+  official: true
+- language: go
+  registry: github
+  name: fabricator
+  url: https://github.com/SGNL-ai/fabricator
+  description: CLI tool for generating realistic, relationship-aware CSV test data
+    from YAML definitions (SGNL ingestion fixtures).
+  official: true

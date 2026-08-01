@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: searched
+source: https://sgnl.ai/product/integrations/
+notes: >-
+  SGNL is a continuous identity / authorization platform built on the OpenID Shared
+  Signals Framework. Conformance is asserted from published product/integration docs
+  and the first-party open-source implementations in the SGNL-ai GitHub org, not from
+  a machine-readable OpenAPI (none is published).
+standards:
+- id: caep
+  name: Continuous Access Evaluation Profile
+  conforms: true
+  evidence: >-
+    SGNL transmits and receives CAEP events; first-party libraries secevent-js and
+    set-transmitter-js and the caep.dev SSF receiver implement CAEP. caep.dev is
+    SGNL-operated.
+- id: ssf
+  name: OpenID Shared Signals Framework
+  conforms: true
+  evidence: caep.dev is an open-source Go OpenID Shared Signals Framework receiver by SGNL.
+- id: rfc8417-set
+  name: Security Event Token (SET)
+  conforms: true
+  evidence: secevent-js implements RFC 8417 Security Event Tokens.
+- id: scim
+  name: System for Cross-domain Identity Management
+  conforms: true
+  evidence: SCIM listed as a supported data-integration/identity ingestion standard.
+- id: oauth2-bearer
+  name: OAuth 2.0 Bearer Token
+  conforms: true
+  evidence: Public API v2 authenticates with Authorization Bearer tokens.
+- id: oidc
+  name: OpenID Connect
+  conforms: true
+  evidence: OpenID Connect listed among supported identity-provider integrations.
+- id: rfc9457-problem-details
+  name: RFC 9457 Problem Details
+  conforms: false
+  evidence: No application/problem+json envelope documented in the public reference.

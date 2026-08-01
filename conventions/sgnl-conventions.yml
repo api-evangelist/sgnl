@@ -1,0 +1,48 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.sgnl.ai/
+api: SGNL Public API v2 (Access Service)
+authentication:
+  style: http-bearer
+  header: Authorization
+  format: Bearer {access-token}
+  see: authentication/sgnl-authentication.yml
+transport:
+  protocol: https-only
+  format: application/json
+  methods:
+  - POST
+  base_url: https://{clientName}.sgnlapis.cloud
+  note: >-
+    All Access Service endpoints are POST with JSON request and response bodies.
+    The base host is a per-tenant subdomain; clientName is the customer/tenant slug.
+request_tracing:
+  header: X-Request-Id
+  direction: request-and-response
+  required: false
+  description: >-
+    Clients may supply an optional X-Request-Id header for request correlation;
+    SGNL echoes it back for tracing.
+idempotency:
+  supported: false
+  note: >-
+    No idempotency-key header is documented. Access-evaluation calls are read-style
+    decision requests, so idempotency keys are not published.
+pagination:
+  supported: unknown
+  note: >-
+    The search endpoints (search/assets, search/principals) return collections;
+    the documented public reference does not specify a cursor/offset pagination
+    contract.
+versioning:
+  scheme: uri-path
+  current: v2
+  path_segment: /access/v2/
+  see: lifecycle/sgnl-lifecycle.yml
+errors:
+  style: http-status-codes
+  note: >-
+    Standard HTTP status codes; no RFC 9457 problem+json envelope is documented in
+    the public reference.
+rate_limit_signaling:
+  documented: false

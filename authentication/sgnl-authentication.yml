@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://developer.sgnl.ai/
+docs: https://developer.sgnl.ai/
+summary:
+  types:
+  - http
+  http_schemes:
+  - bearer
+  api_key_in: []
+  oauth2_flows: []
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  description: >-
+    The SGNL Public API v2 (Access Service) authenticates with a Bearer token passed
+    in the Authorization header ("Authorization: Bearer {access-token}"). The token
+    is generated during integration/protected-system configuration in the SGNL
+    console. All requests must use HTTPS.
+  sources:
+  - https://developer.sgnl.ai/

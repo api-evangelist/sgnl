@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: derived
+source: https://developer.sgnl.ai/
+notes: >-
+  Entity graph derived from the documented SGNL Public API v2 (Access Service) request
+  vocabulary. No machine-readable OpenAPI is published; entities and relationships are
+  taken from the documented endpoints and the SGNL access model (principals act on
+  assets via actions, evaluated against policy).
+entities:
+- name: Principal
+  description: The identity (human user or AI agent / workload) whose access is evaluated.
+- name: Asset
+  description: A protected resource, node, or object access is requested against.
+- name: Action
+  description: The operation a principal seeks to perform on an asset (e.g. read, write).
+- name: Evaluation
+  description: The access decision returned for a principal/asset/action in context.
+- name: Directory
+  description: The queryable graph of principals and their attributes SGNL maintains.
+- name: Provider
+  description: A configured integration / protected-system hook that requests routes to.
+relationships:
+- from: Evaluation
+  to: Principal
+  type: belongs_to
+  via: principalId
+- from: Evaluation
+  to: Asset
+  type: has_many
+  via: assetId
+- from: Evaluation
+  to: Action
+  type: has_many
+  via: action
+- from: Principal
+  to: Asset
+  type: has_many
+  via: access
+  note: Asset search returns the assets a principal can act on.
+- from: Directory
+  to: Principal
+  type: has_many
+  via: principals

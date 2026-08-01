@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: https://developer.sgnl.ai/
+notes: >-
+  No official hosted/remote SGNL MCP server was located. This is a CANDIDATE tool list
+  derived one-to-one from the documented SGNL Public API v2 (Access Service) endpoints
+  so agents can be wired to real-time authorization decisions. Not an SGNL-published
+  manifest.
+server:
+  name: sgnl
+  transport: http
+tools:
+- name: evaluate_access
+  description: Evaluate whether a principal may perform actions on assets, in context.
+  source_operation: POST https://{clientName}.sgnlapis.cloud/access/v2/evaluations
+- name: search_assets
+  description: Return the assets a principal is allowed to access.
+  source_operation: POST https://{clientName}.sgnlapis.cloud/access/v2/search/assets
+- name: search_principals
+  description: Return principals that have a specified action permission.
+  source_operation: POST https://{clientName}.sgnlapis.cloud/access/v2/search/principals
+- name: query_directory
+  description: Query the directory for principal information and attributes.
+  source_operation: POST https://{clientName}.sgnlapis.cloud/access/v2/directory/query
+- name: route_provider_hook
+  description: Route a request to the appropriate configured integration/provider.
+  source_operation: POST https://{clientName}.sgnlapis.cloud/access/v2/providers

@@ -1,8 +1,28 @@
 aid: sgnl
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sgnl.png
 name: SGNL
-description: 'SGNL is a company surfaced as a portfolio company of costanoa-ventures and added to the
-  API Evangelist network as a stub for enrichment. Sector: security. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  SGNL is a continuous identity and authorization platform that eliminates standing
+  privilege and makes real-time, context-aware access decisions for both human users
+  and AI agents. It sits at the center of an enterprise IAM architecture, dynamically
+  adapting permissions as conditions change and revoking sessions in real time. SGNL
+  is built on the OpenID Shared Signals Framework (SSF) and the Continuous Access
+  Evaluation Profile (CAEP), ingesting context from identity providers, HR systems,
+  and security tooling to enforce zero standing privilege across cloud and
+  infrastructure. Its Public API v2 (Access Service) exposes REST/JSON access
+  evaluation, asset and principal search, directory query, and provider-hook routing.
 url: https://raw.githubusercontent.com/api-evangelist/sgnl/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,11 +32,42 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Security
-apis: []
+- Identity
+- Authorization
+- Access Management
+- CAEP
+- Shared Signals
+- Zero Standing Privilege
+- IAM
+apis:
+- name: SGNL Public API v2 (Access Service)
+  description: >-
+    REST/JSON access-evaluation API. Evaluate whether a principal may perform actions
+    on assets in context, search accessible assets or authorized principals, query the
+    directory, and route provider hooks. Bearer-token authentication over HTTPS.
+  humanURL: https://developer.sgnl.ai/
+  baseURL: https://clientName.sgnlapis.cloud
+  tags:
+  - Authorization
+  - Access Management
+  - Identity
+  properties:
+  - type: Documentation
+    url: https://developer.sgnl.ai/
+  - type: APIReference
+    url: https://developer.sgnl.ai/
+  - type: Authentication
+    url: authentication/sgnl-authentication.yml
+  - type: Conventions
+    url: conventions/sgnl-conventions.yml
+  - type: DataModel
+    url: data-model/sgnl-data-model.yml
+  - type: MCPServer
+    url: mcp/sgnl-mcp.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +76,52 @@ maintainers:
 common:
 - type: Website
   url: https://sgnl.ai
+- type: DeveloperPortal
+  url: https://developer.sgnl.ai/
+- type: Documentation
+  url: https://developer.sgnl.ai/
+- type: APIReference
+  url: https://developer.sgnl.ai/
+- type: Support
+  url: https://help.sgnl.ai/
+- type: Blog
+  url: https://sgnl.ai/blog/
+- type: GitHubOrganization
+  url: https://github.com/SGNL-ai
+- type: SignUp
+  url: https://sgnl.ai/demo/
+- type: TermsOfService
+  url: https://sgnl.ai/terms-of-use/
+- type: PrivacyPolicy
+  url: https://sgnl.ai/privacy/
+- type: Authentication
+  url: authentication/sgnl-authentication.yml
+- type: Conventions
+  url: conventions/sgnl-conventions.yml
+- type: Conformance
+  url: conformance/sgnl-conformance.yml
+- type: DataModel
+  url: data-model/sgnl-data-model.yml
+- type: Lifecycle
+  url: lifecycle/sgnl-lifecycle.yml
+- type: Packages
+  url: packages/sgnl-packages.yml
+- type: SDKs
+  url: packages/sgnl-packages.yml
+- type: MCPServer
+  url: mcp/sgnl-mcp.yml
+- type: LLMsTxt
+  url: llms/sgnl-llms.txt
+- type: WellKnown
+  url: well-known/sgnl-well-known.yml
+- type: DomainSecurity
+  url: security/sgnl-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/sgnl-vulnerability-disclosure.yml
+- type: Security
+  url: https://sgnl.ai/responsible-disclosure/
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1
