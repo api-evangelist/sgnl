@@ -2,11 +2,9 @@ generated: '2026-07-21'
 method: derived
 status: candidate
 source: https://developer.sgnl.ai/
-notes: >-
-  No official hosted/remote SGNL MCP server was located. This is a CANDIDATE tool list
-  derived one-to-one from the documented SGNL Public API v2 (Access Service) endpoints
-  so agents can be wired to real-time authorization decisions. Not an SGNL-published
-  manifest.
+notes: No official hosted/remote SGNL MCP server was located. This is a CANDIDATE tool list derived one-to-one
+  from the documented SGNL Public API v2 (Access Service) endpoints so agents can be wired to real-time
+  authorization decisions. Not an SGNL-published manifest.
 server:
   name: sgnl
   transport: http
@@ -26,3 +24,9 @@ tools:
 - name: route_provider_hook
   description: Route a request to the appropriate configured integration/provider.
   source_operation: POST https://{clientName}.sgnlapis.cloud/access/v2/providers
+deployment:
+  mode: none
+  verified: derived
+  tools: 5
+  checked: '2026-08-12'
+  source: catalog MCP census
