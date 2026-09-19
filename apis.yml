@@ -54,6 +54,16 @@ tags:
 - CAEP
 - Shared Signals
 - Zero Standing Privilege
+- Identity and Access Management
+tags_raw:
+- Company
+- Security
+- Identity
+- Authorization
+- Access Management
+- CAEP
+- Shared Signals
+- Zero Standing Privilege
 - IAM
 apis:
 - name: SGNL Public API v2 (Access Service)
