@@ -50,11 +50,10 @@ tags:
 - Security
 - Identity
 - Authorization
-- Access Management
+- Identity and Access Management
 - CAEP
 - Shared Signals
 - Zero Standing Privilege
-- Identity and Access Management
 tags_raw:
 - Company
 - Security
@@ -74,6 +73,10 @@ apis:
   humanURL: https://developer.sgnl.ai/
   baseURL: https://clientName.sgnlapis.cloud
   tags:
+  - Authorization
+  - Identity and Access Management
+  - Identity
+  tags_raw:
   - Authorization
   - Access Management
   - Identity
