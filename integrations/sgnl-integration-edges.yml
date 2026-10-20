@@ -21,21 +21,6 @@ edges:
   seller_name: SGNL
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
-- partner_name: GitHub Marketplace (apps)
-  partner: github
-  partner_match: aggregator
-  type: marketplace
-  marketplace: github-apps
-  channel: partner-built
-  relationship: platform-app
-  direction: third-party
-  evidence: https://github.com/marketplace/sgnl-for-github
-  listing_count: 1
-  apps:
-  - SGNL for GitHub
-  publisher_name: SGNLdusty
-  detected_by: sweep-devtools.py
-  detected: '2026-10-14'
 - partner_name: Okta (own)
   partner: okta
   partner_match: mirror
